@@ -4,7 +4,7 @@ from env import source_dir, target_base_dir
 
 # Set the source and target directory paths
 
-target_dir = target_base_dir + "/{}/.git".format(str(date.today()))
+target_dir = target_base_dir + "/{}/".format(str(date.today()))
 
 commands = []
 
@@ -16,9 +16,9 @@ commands.append(command)
 command = ["mkdir", "-p", target_dir]
 commands.append(command)
 
-# Build the command to be executed
-commands.append(command)
+# # Build the command to be executed
 command = ["cp", "-r", source_dir, target_dir]
+commands.append(command)
 
 # Execute the command
 for c in commands:
